@@ -5,7 +5,7 @@ from config import ADMIN
 
 @Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
-    txt="ʜʏ {msg.from_user.mention} , ɪ ᴀᴍ ᴀ ᴘᴇʀꜱᴏɴᴀʟ ʙᴏᴛ ."
+    txt="ʜʏ ᴜꜱᴇʀ , ɪ ᴀᴍ ᴀ ᴘᴇʀꜱᴏɴᴀʟ ʙᴏᴛ ."
     btn = InlineKeyboardMarkup([[
         InlineKeyboardButton("🤖 SOURCE CODE", url="https://github.com/amitpatle/DankRobot")
         ],])
@@ -16,7 +16,7 @@ async def start_cmd(bot, msg):
 
 @Client.on_callback_query(filters.regex("start"))
 async def start(bot, msg, cb=True):   
-    txt=f"hai {msg.from_user.mention} ᴡᴏᴀʜ ,ʏᴏᴜʀ ꜰɪʟᴇꜱ' ᴘᴇʀꜱᴏɴᴀʟ ꜱᴛᴀɴᴅ-ᴜᴘ ᴄᴏᴍᴇᴅɪᴀɴ!\n ᴜɴʟᴇᴀꜱʜ ᴛʜᴇ ʟᴀᴜɢʜᴛᴇʀ, ᴏɴᴇ ᴡᴀᴄᴋʏ ꜰɪʟᴇɴᴀᴍᴇ ᴀᴛ ᴀ ᴛɪᴍᴇ. 🤖🎤.\n> 🥷🏼 ᴅᴇᴠᴇʟᴏᴘᴇʀ <b><a href=https://github.com/amitpatle>ᴀᴍɪᴛ</a></b>"                                     
+    txt=f"ᴡᴏᴀʜ  {msg.from_user.mention}  ,ʏᴏᴜʀ ꜰɪʟᴇꜱ' ᴘᴇʀꜱᴏɴᴀʟ ꜱᴛᴀɴᴅ-ᴜᴘ ᴄᴏᴍᴇᴅɪᴀɴ!\n ᴜɴʟᴇᴀꜱʜ ᴛʜᴇ ʟᴀᴜɢʜᴛᴇʀ, ᴏɴᴇ ᴡᴀᴄᴋʏ ꜰɪʟᴇɴᴀᴍᴇ ᴀᴛ ᴀ ᴛɪᴍᴇ. 🤖🎤.\n> 🥷🏼 ᴅᴇᴠᴇʟᴏᴘᴇʀ <b><a href=https://github.com/amitpatle>  ᴀᴍɪᴛ </a></b>"                                     
     button= [[
         InlineKeyboardButton("🤖 ʙᴏᴛ ᴄᴏᴅᴇ ", url="https://github.com/amitpatle/DankRobot")
         ],[
@@ -44,10 +44,9 @@ async def help(bot, msg):
 
 @Client.on_callback_query(filters.regex("about"))
 async def about(bot, msg):
-    me=await bot.get_me()
-    Master=f"<a href=https://t.me/Mo_Tech_YT>MoTech</a> & <a href=https://t.me/venombotupdates>MhdRzn</a>"  
+    me=await bot.get_me()  
     Source="<a href=https://github.com/amitpatle/DankRobot>Click Here</a>"
-    txt=f"<b>Bot Name: {me.mention}\nDeveloper: <a href=https://github.com/amitpatle>ᴀᴍɪᴛᴘᴀᴛʟᴇ</a>\n</a>\nMy Master's: {Master}\nSource Code: {Source}</b>"                 
+    txt=f"<b>Bot Name: {me.mention}\nDeveloper: <a href=https://github.com/amitpatle>ᴀᴍɪᴛᴘᴀᴛʟᴇ</a>\n</a>\nSource Code: {Source}</b>"                 
     button= [[        
         InlineKeyboardButton("🚫 Close", callback_data="del"),
         InlineKeyboardButton("⬅️ Back", callback_data="start") 
